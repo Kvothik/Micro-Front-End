@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  micro_front_end:
+    build: micro_front_end
+    ports:
+      - "8083:8083"
+  mfe1:
+    build: mfe1
+    ports:
+      - "8080:8080"
+  mfe2:
+    build: mfe2
+    ports:
+      - "8081:8081"
+  mfe3:
+    build: mfe3
+    ports:
+      - "8082:8082"
