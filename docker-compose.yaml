@@ -1,18 +1,18 @@
 version: "3.9"
 services:
   micro_front_end:
-    build: micro_front_end
+    build: micro_front_end_container
     ports:
-      - "8083:8083"
+      - "3003:3000"
   mfe1:
     build: mfe1
     ports:
-      - "8080:8080"
+      - "3000:3000"
   mfe2:
     build: mfe2
     ports:
-      - "8081:8081"
+      - "3001:3000"
   mfe3:
     build: mfe3
     ports:
-      - "8082:8082"
+      - "3002:3000"
