@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <header>
-        <h3>Doggo of the day</h3>
+        <h3>MFE1 Random Doggo pic test</h3>
         <div>
           <button onClick={() => fetchDoggo()}>New Doggo</button>
         </div>
