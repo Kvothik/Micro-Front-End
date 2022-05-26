@@ -5,7 +5,7 @@ export default function RandomCat() {
 
   const fetchRandomCat = () => {
     setRandomCatImg("");
-    fetch(`https://aws.random.cat/meow`)
+    // fetch(`https://aws.random.cat/meow`)
       .then((res) => res.json())
       .then((catInfo) => {
         setRandomCatImg(catInfo.file);
