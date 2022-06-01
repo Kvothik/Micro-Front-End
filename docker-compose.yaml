@@ -16,3 +16,7 @@ services:
     build: mfe3
     ports:
       - "3002:3000"
+  # server:
+  #   build: server
+  #   ports:
+  #     - "8080:3000"
