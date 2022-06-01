@@ -15,6 +15,7 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log("DB Connected")).catch(err => console.log("DB Conncetion ERROR", err));
 
 // middleware
+app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors({ origin: true, credentials: true }));
 

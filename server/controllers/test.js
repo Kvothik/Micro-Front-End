@@ -1,4 +1,4 @@
-const testDbItem = require('../models/test')
+const testDbModel = require('../models/test')
 
 exports.getTest = async (req, res) => {
     res.status(200).json({
@@ -7,18 +7,15 @@ exports.getTest = async (req, res) => {
 };
 
 exports.getMerlin = async (req, res) => {
-    res.status(200).json({
-        message: "Get Merlin is working!",
-    });
+    testDbModel.find().then(data => res.json(data))
+    .catch(err => res.status(404).json({ nodatafound: 'No data found' }));
 };
 
 exports.createTest = async (req, res) => {
-    console.log('in server');
-    console.log(req.body);
-    const testObj = new testDbItem(req.body);
-    // await testObj.save().then(() => {
-    //     res.status(200).json({ testObj });
-    // }).catch((err) => {
-    //     res.status(400).json({ msg: err });
-    // })s
+    const testObj = new testDbModel(req.body);
+    await testObj.save().then(() => {
+        res.status(200).json({ testObj });
+    }).catch((err) => {
+        res.status(400).json({ msg: err });
+    })
 };
