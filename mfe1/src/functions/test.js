@@ -8,18 +8,18 @@ export const getTest = async () => {
             },
         });
         return await res.json();
-    }catch(err){}
+    } catch (err) { }
 }
-
-export const getDog = async () => {
+export async function createTest(data) {
+    console.log('1');
     try {
-        const res = await fetch('http://localhost:8080/test', {
-            method: 'GET',
-            headers: {
-                Accept: 'application/json',
-                'Content-type': 'application/json',
-            },
+        const res = await fetch('http://localhost:8080/createTest', {
+            method: 'POST',
+            headers: { 'Accept': 'application/jsons', 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
         });
+        console.log(data);
+        console.log('2');
         return await res.json();
-    }catch(err){}
+    } catch (err) { console.log(err); }
 }

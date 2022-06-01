@@ -2,17 +2,25 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 //functions
-import {getTest} from './functions/test';
+import { getTest } from './functions/test';
+import { createTest } from './functions/test';
 
 function App() {
   const [dogImg, setDogImg] = useState(null);
   const [data, setData] = useState("Before fetch test");
 
-useEffect(()=> {
-  getTest().then((res) => {
-    setData(res.message);
-  }).catch(err => console.log(err))
-}, []);
+  const testObj = {
+    'name': 'Merlin',
+    'imageUrl': 'https://i.ibb.co/wykGdL5/20220329-174050.jpg'
+  }
+
+  createTest(testObj);
+
+  useEffect(() => {
+    getTest().then((res) => {
+      setData(res.message);
+    }).catch(err => console.log(err))
+  }, []);
 
   const fetchDoggo = () => {
     setDogImg("");
