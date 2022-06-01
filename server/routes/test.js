@@ -11,7 +11,7 @@ const { createTest } = require('../controllers/test');
 // api routes
 //CREATE
 //router.post
-router.post('/createTest', createTest);
+router.post('/createTest', createTest);//POST to mongodb template
 //DELETE
 //router.delete
 //UPDATE
@@ -19,6 +19,6 @@ router.post('/createTest', createTest);
 //GET
 //router.get
 router.get('/test', getTest);
-router.get('/merlin', getMerlin);
+router.get('/merlin', getMerlin);//GET from mongodb template
 
 module.exports = router;
