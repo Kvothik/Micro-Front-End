@@ -1,21 +1,18 @@
 version: "3.9"
 services:
-  micro_front_end:
-    build: micro_front_end_container
-    ports:
-      - "3003:3000"
-  mfe1:
-    build: mfe1
+  feed:
+    build: feed
     ports:
       - "3000:3000"
-  mfe2:
-    build: mfe2
+  messaging:
+    build: messaging
     ports:
       - "3001:3000"
-  mfe3:
-    build: mfe3
+  profile:
+    build: profile
     ports:
       - "3002:3000"
+  # Start the server in the terminal!! npm run start
   # server:
   #   build: server
   #   ports:

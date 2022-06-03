@@ -37,7 +37,7 @@ function App() {
                     frameBorder="0"
                 ></iframe>
             </div>
-            <div className="mfe3">
+            <div className="profile">
                 <iframe
                     src="http://localhost:3002"
                     style={{ width: '1px', minWidth: '100%', height: '400px' }}
