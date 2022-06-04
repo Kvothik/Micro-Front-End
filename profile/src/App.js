@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          This is MFE3!
+          This is profile!
         </a>
       </header>
     </div>

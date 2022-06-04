@@ -21,7 +21,7 @@ export default function RandomCat() {
   return (
     <div>
       <header>
-        <h3>MFE2 Random Cat pic test</h3>
+        <h3>messaging Random Cat pic test</h3>
         <div>
           <button onClick={() => fetchRandomCat()}>New Cat</button>
         </div>
