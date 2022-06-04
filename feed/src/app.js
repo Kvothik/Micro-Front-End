@@ -44,22 +44,40 @@ function App() {
   });
 
   return (
-    <div>
-      <header>
-        <h3>{data}</h3>
-        <div>
-          <button onClick={() => fetchDoggo()}>New Doggo</button>
-          <button onClick={() => seeMerlinTest()}>See a Merlin from the DB</button>
-        </div>
-        {dogImg !== "" ? (
+    <>
+      <div>
+        <header>
+          <h3>{data}</h3>
           <div>
-            <img src={dogImg} width="400px" alt="doggo" />
+            <button onClick={() => fetchDoggo()}>New Doggo</button>
+            <button onClick={() => seeMerlinTest()}>See a Merlin from the DB</button>
           </div>
-        ) : (
-          <div>Loading Image</div>
-        )}
-      </header>
-    </div>
+          {dogImg !== "" ? (
+            <div>
+              <img src={dogImg} width="400px" alt="doggo" />
+            </div>
+          ) : (
+            <div>Loading Image</div>
+          )}
+        </header>
+      </div>
+      <div className="messaging">
+        <iframe
+          src="http://localhost:3001"
+          style={{ width: '1px', minWidth: '100%', height: '400px' }}
+          scrolling="no"
+          frameBorder="0"
+        ></iframe>
+      </div>
+      <div className="profile">
+        <iframe
+          src="http://localhost:3002"
+          style={{ width: '1px', minWidth: '100%', height: '400px' }}
+          scrolling="no"
+          frameBorder="0"
+        ></iframe>
+      </div>
+    </>
   );
 }
 
